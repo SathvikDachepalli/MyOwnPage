@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "Exercise",
     'rest_framework',
     'corsheaders',
+    "rest_framework.authtoken" #python manage.py drf_create_token <user_name>
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,10 @@ CORS_ORIGIN_WHITELIST = (
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media/')
+
+
+REST_FRAMEWORK={
+    "DEFAULT_AUTHENTICATION_CLASSES":[
+        "rest_framework.authentication.TokenAuthentication",
+    ]
+}

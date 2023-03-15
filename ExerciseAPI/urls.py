@@ -9,7 +9,8 @@ admin.site.site_title="Exercise page"
 admin.site.index_title="Welcome Admin"
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",include('Exercise.urls')),
+    path("api/",include('Exercise.urls')),
+    path("",include('MyPage.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

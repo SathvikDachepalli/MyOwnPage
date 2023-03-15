@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "Exercise",
     'rest_framework',
     'corsheaders',
-    "rest_framework.authtoken" #python manage.py drf_create_token <user_name>
+    "rest_framework.authtoken", #python manage.py drf_create_token <user_name>
+    "MyPage",
 ]
 
 MIDDLEWARE = [

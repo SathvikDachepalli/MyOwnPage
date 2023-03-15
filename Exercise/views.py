@@ -22,19 +22,26 @@ from rest_framework import mixins
 
 #     def get(self,request,*args, **kwargs):
 #         return self.list(self,request,*args, **kwargs)
-    
+
 #     def post(self,request,*args, **kwargs):
 #         return self.create(self,request,*args, **kwargs)
 
 
 #Instead of using mixins and creating all that. We can just use this line.
+from rest_framework.permissions import BasePermission
+
+class ReadOnly(BasePermission):
+    def has_permission(self, request, view):
+        return request.method == 'GET'
 
 class ExerciseView(generics.ListCreateAPIView):
+    permission_classes = [IsAuthenticated | ReadOnly]
     serializer_class=ExerciseAPISerializer
     queryset=ExercisesAPI.objects.all()
 
 
 class CRUDExerciseView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsAuthenticated | ReadOnly]
     serializer_class=ExerciseAPISerializer
     queryset=ExercisesAPI.objects.all()
 
@@ -59,4 +66,3 @@ class CRUDExerciseView(generics.RetrieveUpdateDestroyAPIView):
 #             serializer.save()
 #             return Response(serializer.data)
 #         return Response(serializer.errors)
-        

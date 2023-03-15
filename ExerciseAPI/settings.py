@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9)xev)(@i-gg%d-tq-se9vasezfrq-or_k!yre1cff$%f18s)p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["dachesathvik.pythonanywhere.com","127.0.0.1"]
 
 
 # Application definition
@@ -136,9 +136,8 @@ CORS_ORIGIN_WHITELIST = (
     "http://localhost:4200",
 )
 
-MEDIA_URL='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media/')
-
+MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 REST_FRAMEWORK={
     "DEFAULT_AUTHENTICATION_CLASSES":[

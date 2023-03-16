@@ -1,0 +1,25 @@
+.navbar-header{
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+}
+.border-info{
+    background-color: rgb(194, 105, 46);
+}
+body{
+    background-color: rgb(226, 125, 58);
+}
+.container-fluid{
+    position: relative;
+}
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+.dropdown{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}

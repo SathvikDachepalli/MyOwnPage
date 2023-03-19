@@ -38,10 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "Exercise",
+    "MyPage",
     'rest_framework',
     'corsheaders',
     "rest_framework.authtoken", #python manage.py drf_create_token <user_name>
-    "MyPage",
+
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:4200",
+    "https://dachesathvik.pythonanywhere.com"
 )
 
 MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')

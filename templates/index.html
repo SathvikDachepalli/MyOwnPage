@@ -3,7 +3,9 @@
 {% block title %} Dachepalli Sathvik {% endblock title %}
 
 {% block content %}
-    {% include "content.html" %}
+    {% with site_name="Sathvik"  %}
+        {% include "content.html" %}
+    {% endwith %}
 {% endblock content %}
 
 {% block footer %}

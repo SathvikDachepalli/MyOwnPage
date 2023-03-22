@@ -39,3 +39,20 @@ body{
 .text-light{
     color: var(--bg-color-header);
 }
+.background {
+  
+    position:absolute;
+    color: aliceblue;
+    display : block;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: white;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}

@@ -1,14 +1,16 @@
 {% load static %}
 
-<header class="header">
+<header id="home" class="header" id="parent">
   <ul class="position-absolute top-50 start-50 translate-middle-x">
     <li><h1 class="display-4 text-light header-text">Dachepalli Sathvik</h1></li>
     <li><span id="element" class="display-6 text-light pt-5"></span></li>
   </ul>
-  <canvas class="header__background" style="width: 100%; height: 100%;"></canvas>
+  <div style="width:100%">
+    <canvas class="header__background" id="canvas" style="width: 100%; height: 100%;"></canvas>
+  </div>
 </header>
 
-<div class="jumbotron">
+<div id="about" class="jumbotron">
   <div class="container text-light">
     <h1 class="display-3">{{ site_name }}</h1>
     <p>
@@ -21,4 +23,56 @@
   </div>
 </div>
 
+<div id="resume" class="container">
+  <embed src="{% static 'pdf/SathvikResume.pdf' %}#navpanes=0" type="application/pdf" width="100%" height="600px" />
+</div>
 
+<footer id="footer" class="text-center text-lg-start footer">
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom container  ">
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <div>
+      <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=dachepallisathvik@gmail.com" target="_blank" class="me-4 text-reset">
+        <i class="fa-brands fa-google"></i>
+      </a>
+      <a href="https://www.instagram.com/just_sathvik_/" target="_blank" class="me-4 text-reset">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sathvik-dachepalli-19a5691a2/" target="_blank" class="me-4 text-reset">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/SathvikDachepalli" target="_blank" class="me-4 text-reset">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+    {% load static %}
+  </section>
+  <section class=" justify-content-center p-4 border-bottom container text-center">
+      <div class="container justify-content-center d-lg-block">
+        <h6 class="text-uppercase fw-bold mb-4 "> Contact </h6>
+        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
+          <div class="credentials d-lg-block d-lg-flex justify-content-center">
+            <p><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=dachepallisathvik@gmail.com" target="_blank" class="me-4 text-reset"><i class="fas fa-envelope me-2"></i>dachepallisathvik@gmail.com </a> &nbsp;&nbsp;</p>
+            <p><i class="fas fa-map-marker-alt me-1"></i>Hyderabad, Telangana, India &nbsp;&nbsp;</p>
+            <p><i class="fas fa-phone me-1"></i>+91 90005 77242 &nbsp;&nbsp;</p>
+            <p><i class="fa-brands fa-whatsapp me-1"></i>+91 90005 77242 &nbsp;&nbsp;</p>
+          </div>
+      </div>
+  </section>
+</footer>
+
+<script>
+  //Function to resize a canvas inside a div.
+  var canvas = document.getElementById("canvas");
+  $(window).on('load',function () {
+    fitToContainer(canvas);
+  });
+  function fitToContainer(canvas){
+    console.log(canvas.offsetWidth)
+    canvas.style.width='100%';
+    canvas.style.height='100%';
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+</script>

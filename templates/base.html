@@ -37,7 +37,8 @@
         </ul>
       </div>
     </nav> -->
-
+    <!-- Django to load css instead of loading normally -->
+    {% block css %}{% endblock css %}
     {% block content %}{% endblock content %}
 
     <script>

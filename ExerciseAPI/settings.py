@@ -137,7 +137,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
     "http://localhost:4200",
     "https://dachesathvik.pythonanywhere.com",
-    "http://dachesathvik.pythonanywhere.com/",
+    "http://dachesathvik.pythonanywhere.com",
 )
 
 MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')

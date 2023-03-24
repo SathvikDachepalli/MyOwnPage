@@ -46,24 +46,24 @@ body{
 }
 
 .text-light{
-    color: var(--bg-color-header);
+  color: var(--bg-color-header);
 }
 
 .background {
-    position:absolute;
-    color: aliceblue;
-    display : block;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    background-color: white;
+  position:absolute;
+  color: aliceblue;
+  display : block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: white;
 }
 
 .sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 ol, ul {
@@ -131,17 +131,6 @@ html, body{
 
 .header .header__introduction .buttons .button:first-of-type {
   margin-right: 42px;
-}
-
-.header .header__scroll {
-  position: absolute;
-  width: 110px;
-  right: 0;
-  left: 0;
-  bottom: 29px;
-  margin: auto;
-  text-align: center;
-  z-index: 10;
 }
 
 .header .header__background {

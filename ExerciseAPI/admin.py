@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Exercise.models import ExercisesAPI
+from ExerciseAPI.models import ExercisesAPI
 
 # Register your models here.
 

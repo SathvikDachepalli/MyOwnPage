@@ -1,7 +1,5 @@
 from django.db import models
 
-
-
 class ExercisesAPI(models.Model):
     exerciseID=models.AutoField(primary_key=True)
     imageOfExercise=models.ImageField(editable=True,default="img/%y")

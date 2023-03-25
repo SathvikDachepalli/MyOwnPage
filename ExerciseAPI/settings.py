@@ -55,6 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'ExerciseAPI.urls'
@@ -149,6 +150,6 @@ REST_FRAMEWORK={
     ]
 }
 
-X_FRAME_OPTIONS = 'ALLOWALL'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 XS_SHARING_ALLOWED_METHODS = ['POST','GET','OPTIONS', 'PUT', 'DELETE']

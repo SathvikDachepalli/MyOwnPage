@@ -1,3 +1,4 @@
+{% load static %}
 <style>
     :root{
         --bg-color-header:rgb(255, 255, 255);
@@ -6,38 +7,38 @@
         --bg-color-footer:rgb(54, 52, 52);
         --bl-val:8px;
     }
-    
+
     .navbar-header{
         color: var(--bg-color-header);
         font-size: 1.5rem;
     }
-    
+
     .border-info{
         background-color: var(--body-bg-color);
     }
-    
+
     body{
         background-color: var(--body-bg-color);
     }
-    
+
     .container-fluid{
         position: relative;
     }
-    
+
     .topright {
         position: absolute;
         top: 8px;
         right: 16px;
         font-size: 18px;
     }
-    
+
     .dropdown{
         position: absolute;
         top: 8px;
         right: 16px;
         font-size: 18px;
     }
-    
+
     .footer{
         background-color: var(--bg-color-footer);
         color: var(--bg-color-header);
@@ -45,11 +46,11 @@
         text-align: center;
         padding: 10px;
     }
-    
+
     .text-light{
       color: var(--bg-color-header);
     }
-    
+
     .background {
       position:absolute;
       color: aliceblue;
@@ -59,29 +60,29 @@
       z-index: 0;
       background-color: white;
     }
-    
+
     .sticky{
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1;
     }
-    
+
     ol, ul {
       list-style: none;
     }
-    
+
     html, body{
       height: 100%;
     }
-    
+
     .header {
       height: 100%;
-      background: url('../bg1.jpeg') bottom no-repeat transparent;
+      background: url({% static "bg1.jpeg" %}) bottom no-repeat transparent;
       background-size: cover;
       position: relative;
     }
-    
+
     .header .header__meta {
       position: absolute;
       top: 40px;
@@ -89,11 +90,11 @@
       font-size: 14px;
       z-index: 10;
     }
-    
+
     .header .header__meta li {
       display: inline-block;
     }
-    
+
     .header .header__meta li:after {
       display: inline-block;
       content: "";
@@ -103,37 +104,37 @@
       background-color: #fff;
       opacity: 0.46;
     }
-    
+
     .header .header__meta li:last-of-type:after {
       display: none;
       visibility: hidden;
     }
-    
+
     .header .header__meta strong {
       font-size: 13px;
       font-weight: bold;
     }
-    
+
     .header .container {
       z-index: 10;
     }
-    
+
     .header .header__introduction {
       padding-top: 60%;
     }
-    
+
     .header .header__introduction p {
       opacity: 0.9;
     }
-    
+
     .header .header__introduction .buttons {
       margin-top: 61px;
     }
-    
+
     .header .header__introduction .buttons .button:first-of-type {
       margin-right: 42px;
     }
-    
+
     .header .header__background {
       position: absolute;
       display: block;
@@ -143,6 +144,6 @@
       left: 0;
       z-index: 0;
     }
-    
-    
+
+
 </style>

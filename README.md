@@ -1,4 +1,4 @@
-# EXERCISE API
+# My Website
 
 
 This is a simple Django API created for the purpose of demonstrating my skills in creating and hosting an API using Python and Django. The API is hosted on PythonAnywhere.com and is publicly accessible.
